@@ -180,7 +180,7 @@ pre {
         <article>
             <div>
                 <h3>QBit and GParticulates</h3>
-                <p>About time I explained this projecta  little (it is on the back burner for a little while). First off, I am no Mathematician, I am learning some alebra on the fly too. This was my first serious attempt at writing a program in C.<br><br>I had a brief conversation with my father about QBits, he literally asked me how much I know about them and quantum computing and I said in summary 'not a lot, probabalistic computing'. I couldn't sleep that night and was thinking about the logic of a single QBit knowing from something i'd briefly read, they consider, 1, 0 and 1 and 0 at the same time to determine a probable outcome.<br><br>I set about considering how that might be acheived programatically. Well we have to consider either 1 or 0 and 1 and 0 and the probability, I wanted to set this in motion and add the learning element to it using a DNN (Deep Neural Network).<br><br>I chose to set about writing, following and attempting to compress two existing solutions for the DNN (detailed in the code) and for the probability chose the Markov Decision Process since I am already farmiliar with this process from my final project at University.<br><br>It's almost complete and I like the original in q2.c and the latest in q9.c. They are almost complete but need some review and verification.<br><br> I was also considering what a GOd particle might look like as a signal during all this code writing and mathematical exploration. I came to the conclusion it would be a sigmoid with an infinite exponent for an infinite iteration to the value of PI as it would be omnipresent cubed since it would be three dimensional. I didn't need to add the fourth dimension of time, since it is already rolling infinitely. Here's the code for the GParticulate.</p>
+                <p>About time I explained this projecta  little (it is on the back burner for a little while). First off, I am no Mathematician, I am learning some alebra on the fly too. This was my first serious attempt at writing a program in C.<br><br>I had a brief conversation with my father about QBits, he literally asked me how much I know about them and quantum computing and I said in summary 'not a lot, probabalistic computing'. I couldn't sleep that night and was thinking about the logic of a single QBit knowing from something i'd briefly read, they consider, 1, 0 and 1 and 0 at the same time to determine a probable outcome.<br><br>I set about considering how that might be acheived programatically. Well we have to consider either 1 or 0 and 1 and 0 and the probability, I wanted to set this in motion and add the learning element to it using a DNN (Deep Neural Network).<br><br>I chose to set about writing, following and attempting to compress two existing solutions for the DNN (detailed in the code) and for the probability chose the Markov Decision Process since I am already farmiliar with this process from my final project at University.<br><br>It's almost complete and I like the original in q2.c and the latest in q9.c. They are almost complete but need some review and verification.<br><br> I was also considering what a GOd particle might look like as a signal during all this code writing and mathematical exploration. I came to the conclusion it would be a sigmoid with an infinite exponent for an infinite iteration to the value of PI as it would be omnipresent cubed since it would be three dimensional. I didn't need to add the fourth dimension of time, since it is already rolling infinitely. Here's the code for the GParticulate.<br><br> The important bit is not the whole code and it's syntax but the expression(s).</p>
 
                 <h4>Code</h4>
                 <code>
@@ -192,8 +192,9 @@ pre {
                     float a;
                     float pi;
                     float u;
+                    float rad = 0.1;
                     //datatype or structure as varible or connstant input.
-                    #define a = pow((0 ?: 1), *argv)+(1 ?: 0);
+                    #define a = (((0 ?: 1), float % 0) % 1 *int_discard)+(1 ?: 0);
                     #define pi = 3.1415926535;
                     #define u = pow(pow(pow((pi*(rad)), 3), ((exp(++a))/(exp(a--))), exp(input));
 
@@ -206,8 +207,8 @@ pre {
                     #define u = pow(pow(pow((pi*(rad)), ((exp(++a))*(exp(a--))), exp(input)), 3);
                     */
 
-                    float main(float *argv){
-                        return 0;
+                    float main(){
+                        return 0.0; //not sure if this will work might do given the main method is float.
                     }
                     </pre>
                 </code>
