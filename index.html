@@ -48,6 +48,14 @@ h3 {
 
 }
 
+h4 {
+
+    display : block;
+    margin-left: 20px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
 content .main {
 
     display: block;
@@ -60,7 +68,7 @@ article {
 
     background-color: gainsboro;
     padding: 10px;
-    height: 400px;
+    height: 100% auto;
     border: 0px solid black;
     border-radius: 25px;
     margin: 30px;
@@ -106,6 +114,19 @@ footer {
     padding-top: 40px;
 
 }
+
+pre {
+
+    display: block;
+    background-color: white;
+    border: solid gray 1px;
+    border-radius: 15px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
 </style>
 </head>
 <body>
@@ -115,6 +136,46 @@ footer {
         <article>
         <h3>Welcome</h3>
         <p>Hello and welcome, this is the landing page for a redirect to some of the projects I am working on. I do other things too, artwork, reading spending time with family and cooking. I am fond of a lot of things to make use of my free time but am particularly fond of the projects which utilise the programming skills I am trying to keep up with. Here's a link to <a href="https://www.github.com/russellclarke82" target="_self">My Projects on GitHub</a>.<br><br> You'll find  a lot of them are still unfinished, this is because I get distracted with other ideas and at present do not have focus, just free reign on the Computer.<br><br>It would be great to meet some of you or talk online and come up with some sort of plan or project from concept to completion. You can find my contact details via GitHub.<br><br>I have put my <a href="https://github.com/russellclarke82/russellclarke82.github.io/blob/master/I7694005_RClarke_Dissertation_Final_Draft.pdf" target="_blank">Dissertation</a> up there for a read as it will help to understand the path I am hoping to take with some of the exploratory programming. If you have any questions. I'd be happy to answer some of them.<br><br>Also, if you fancy taking a look at some of the artwork I do it can be found on <a href="https://www.deviantart.com/albinob2" target="_self">deviant art</a>.</p>
+        </article>
+        <article>
+            <div>
+                <h3>Projects</h3>
+                <p>You might notice some of my projects are incomplete. Well, I have concentration issues (yes it's a medical condition) and so with that comes a lot of ideas I have to note down in partial pseudo.<br><br>SInce losing employment, I now have more time to work on those projects and so I endeavour to get some of those to you for you, the reader to take a look at.
+<br><br>I prefer to write off the cuff and learn as I go, I try not to copy and paste because why? I won't learn anything and there is no challenge in copying someone elses work. This is the latest, I was pondering over MAC adress generation for ages, left the partial pseudo, then finally, on to the final piece below.<br><br>There are derivatives which can be used from this and yes, I will reorganise my code into a more structured repository. What's interesting here is this is quite an intensive generation, I piped out to a file one eveing and got to 5.3 GB and decided to stop. There is probably a nice logarithm out there which will be less processor intensive. Looks pretty cool though to see it finally working. Language is Python, I am learning Python, C and a few others on the fly, sorry if they take a hile to come to fluition.</p>
+
+                <h4>Code</h4>
+                <code>
+                    <pre class="code_div">
+                    for w in range(16):
+                        m = '%x' % w
+                        for v in range(16):
+                            l = '%x' % v
+                            for u in range(16):
+                                j = '%x' % u
+                                for t in range(16):
+                                    x = '%x' % t
+                                    for s in range(16):
+                                        h = '%x' % s
+                                        for r in range(16):
+                                            g = '%x' % r
+                                            for q in range(16):
+                                                f = '%x' % q
+                                                for p in range(16):
+                                                    e = '%x' % p
+                                                    for o in range(16):
+                                                        d = '%x' % o
+                                                        for n in range(16):
+                                                            c = '%x' % n
+                                                            for k in range(16):
+                                                                b = '%x' % k
+                                                                for i in range(16):
+                                                                    a = '%x' % i
+                                                                    print(a + b + ':' + c + d + ':' + e + f + ':' + g + h + ':' + x + j + ':' + l + m)
+
+                    exit(0)
+                    </pre>
+                </code>
+            </div>
         </article>    
     </content>
 </content>
