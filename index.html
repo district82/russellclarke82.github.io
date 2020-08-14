@@ -141,7 +141,7 @@ pre {
             <div>
                 <h3>Projects</h3>
                 <p>You might notice some of my projects are incomplete. Well, I have concentration issues (yes it's a medical condition) and so with that comes a lot of ideas I have to note down in partial pseudo.<br><br>Since losing employment, I now have more time to work on those projects and so I endeavour to get some of those to you for you, the reader to take a look at.
-<br><br>I prefer to write off the cuff and learn as I go, I try not to copy and paste because why? I won't learn anything and there is no challenge in copying someone elses work. This is the latest, I was pondering over MAC address generation for ages, left the partial pseudo, then finally, on to the final piece below.<br><br>There are derivatives which can be used from this and yes, I will reorganise my code into a more structured repository. What's interesting here is this is quite an intensive generation, I piped out to a file one eveing and got to 5.3 GB and decided to stop. There is probably a nice logarithm out there which will be less processor intensive. Looks pretty cool though to see it finally working. Language is Python, I am learning Python, C and a few others on the fly, sorry if the other work takes a while to come to fluition.</p>
+<br><br>I prefer to write off the cuff and learn as I go, I try not to copy and paste because why? I won't learn anything and there is no challenge in copying someone elses work. This is the latest, I was pondering over MAC address generation for ages, left the partial pseudo, then finally, on to the final piece below.<br><br>There are derivatives which can be used from this and yes, I will reorganise my code into a more structured repository. What's interesting here is this is quite an intensive generation, I piped out to a file one eveing and got to 5.3 GB and decided to stop. There is probably a nice logarithm out there which will be less processor intensive. Looks pretty cool though to see it finally working. Language is Python, I am learning Python, C and a few others on the fly, sorry if the other work takes a while to come to fruition.</p>
 
                 <h4>Code</h4>
                 <code>
@@ -177,6 +177,42 @@ pre {
                 </code>
             </div>
         </article>    
+        <article>
+            <div>
+                <h3>QBit and GParticulates</h3>
+                <p>About time I explained this projecta  little (it is on the back burner for a little while). First off, I am no Mathematician, I am learning some alebra on the fly too. This was my first serious attempt at writing a program in C.<br><br>I had a brief conversation with my father about QBits, he literally asked me how much I know about them and quantum computing and I said in summary 'not a lot, probabalistic computing'. I couldn't sleep that night and was thinking about the logic of a single QBit knowing from something i'd briefly read, they consider, 1, 0 and 1 and 0 at the same time to determine a probable outcome.<br><br>I set about considering how that might be acheived programatically. Well we have to consider either 1 or 0 and 1 and 0 and the probability, I wanted to set this in motion and add the learning element to it using a DNN (Deep Neural Network).<br><br>I chose to set about writing, following and attempting to compress two existing solutions for the DNN (detailed in the code) and for the probability chose the Markov Decision Process since I am already farmiliar with this process from my final project at University.<br><br>It's almost complete and I like the original in q2.c and the latest in q9.c. They are almost complete but need some review and verification.<br><br> I was also considering what a GOd particle might look like as a signal during all this code writing and mathematical exploration. I came to the conclusion it would be a sigmoid with an infinite exponent for an infinite iteration to the value of PI as it would be omnipresent cubed since it would be three dimensional. I didn't need to add the fourth dimension of time, since it is already rolling infinitely. Here's the code for the GParticulate.</p>
+
+                <h4>Code</h4>
+                <code>
+                    <pre class="code_div">
+                    #include <stdio.h>
+                    #include <math.h>
+                    #include <stdlib.h>
+                    #include <float.h>
+                    float a;
+                    float pi;
+                    float u;
+                    //datatype or structure as varible or connstant input.
+                    #define a = pow((0 ?: 1), *argv)+(1 ?: 0);
+                    #define pi = 3.1415926535;
+                    #define u = pow(pow(pow((pi*(rad)), 3), ((exp(++a))/(exp(a--))), exp(input));
+
+                    /*
+                    ####################
+                    #Other Alternatives#
+                    ####################
+                    #define u = pow(pow(pow((pi*(rad)), ((exp(++a))/(exp(a--))), exp(input)), 3);
+                    #define u = pow(pow(pow((pi*(rad)), 3), ((exp(++a))*(exp(a--))), exp(input)));
+                    #define u = pow(pow(pow((pi*(rad)), ((exp(++a))*(exp(a--))), exp(input)), 3);
+                    */
+
+                    float main(float *argv){
+                        return 0;
+                    }
+                    </pre>
+                </code>
+            </div>
+        </article>
     </content>
 </content>
 <footer><a href="index.html" target="_self" class="footer_links">Home</a>      <a href="httpS://www.github.com/russellclarke82" target="_self" class="footer_links">Github Repositories</a></footer>
