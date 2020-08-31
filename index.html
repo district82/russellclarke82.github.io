@@ -389,7 +389,7 @@ struct L {
     L = 0; //set to zero
     L1 = 0.000000; //lon  
     L2 = 0.000000; //lat
-    #define L3 = (L / (L1 - L2)); //subtract the lon and lat from eachother gives an invertion, divide over distance as I said, my math is not yet what it should be.
+    #define L3 = (-L1, -L2); //Get an invert for accuracy.
 }L;
 
 float main(float argc char **argv) {
