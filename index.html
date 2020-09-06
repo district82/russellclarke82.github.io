@@ -129,7 +129,7 @@ float RAD = 1;
 #define A (pow((PI * RAD), DIM));
 
 //Partial derivative
-#define V (time1 - time2);
+#define V ((PT - FT) / pow(T, 3));
 
 //Partial derivative time matrix
 #define VEL [T, V];
