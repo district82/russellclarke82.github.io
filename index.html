@@ -272,7 +272,7 @@ float RAD = 1;
 #define A (pow((PI * RAD), DIM));
 
 //Partial derivative
-#define V (time1 - time2);
+#define V ((PT - FT) / C);
 
 //Partial derivative time matrix
 #define VEL [T, V];
@@ -351,6 +351,81 @@ float main() {
     }
     
     return 0;
+}
+                    </code>
+                </pre>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h3><a href="https://github.com/russellclarke82/RTL" target="_blank"></a></h3>
+                <p>This project is a merger from the 'Thyme' and 'QBit and GParticulates' repositories. It combines the back propagation reinforcement learning algorithms in i9.c and the probability calculations which make use of decision tables and the Markov Decision Process with the theorem of time.<br><br>The purpose is to try to get an accurate probability over time by calculations and learning constantly from the partial derivative VEL which is a Matrix of time T and differential V.<br><br>It is still a work in progress since it is theorem. More work to be done later.</p>
+         <h4>Code</h4>
+                <pre class="code_div">                    
+                    <code>                    
+float A;
+float T;
+float C;
+float PT;
+float FT;
+float V;
+float PI;
+float DIM;
+float SIG(C);
+float VEL;
+float IN;
+float RAD = 1;
+
+float WEIGHT;
+float weights;
+float EPSILON;
+float SIGMOID;
+float SIGMOIDPRIME;
+float COST;
+float BIAS;
+float REWARD;
+float PROBABILITY;
+float MDP;
+float Q;
+float R;
+float INPUT;
+float HIDDEN;
+float OUTPUT;
+
+float main () {
+
+    #define IN T;
+    #define SIG ((1) / (-1(C--)));
+    #define PI 3.1415926535;
+    #define A (pow((PI * RAD), DIM));
+    #define V (time1 - time2);
+    #define VEL [T, V];
+    #define PT ((C % FT) / T); 
+    #define C exp(pow(A), ((exp(--IN)) / (exp(IN++))));
+    #define FT (((T) / C) - PT); 
+    #define T exp(((PT + FT) / VEL) / (pow(exp(VEL))), (exp(IN, DIM))));
+
+    #define WEIGHT modf(((randn() % 1.0) + 0.0), float *wdiscard);
+    #define EPSILON 5E-5;
+    #define SIGMOID (1.0 / (-1 + (exp()--))));
+    #define SIGMOIDPRIME (1 * (-1 + (exp()--))));
+    #define GRAD_DESCENT pow(((COST) - (COST(EPSILON))), 2);
+    #define COST (weights, BIAS);
+    #define BIAS modf(((randn() % 1.0) + 0.0), float *bdiscard);
+    #define N INPUT++;
+    #define OUT SIGMOID((weights * N) + BIAS);
+    #define Y (0 ?: 1);
+    #define REWARD (Y / (INPUT, N));
+    #define PROBABILITY (N / (INPUT, Y));
+    #define MDP (PROBABILITY / (REWARD + BIAS));
+    #define Q pow(pow(MDP, N), 2) + Y;
+    #define R (Q / (REWARD + BIAS));
+
+    #define INPUT (IN, OUT, VEL) * WEIGHT + BIAS;
+    #define HIDDEN (10 * pow(20, 4)) * WEIGHT;
+    #define OUTPUT (5 * WEIGHT);
+    
+    return 1;
 }
                     </code>
                 </pre>
