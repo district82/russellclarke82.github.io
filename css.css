@@ -154,7 +154,7 @@ pre {
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucidia Console", Terminal, monospace;
     font-size: 1.0em;
     width: 100%, auto;
-    height: 300px;
+    height: 400px;
 
 }
 
@@ -165,6 +165,6 @@ code {
     overflow: auto;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucidia Console", Terminal, monospace;
     width: 100%, auto;
-    height: 300px;
+    height: 400px;
 
 }
