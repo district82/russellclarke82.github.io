@@ -63,8 +63,7 @@ h5 {
 img {
 
     display: block;
-    position: relative;
-    float: left;
+    padding: 10px; /* Bear with a marmalade sandwich */
 
 }
 
@@ -87,15 +86,6 @@ article {
     border: 0px solid black;
     border-radius: 25px;
     margin: 30px;
-    position: relative;
-
-}
-
-div .image_holder {
-
-    padding: 10px; /* Bear with Marmalade Sandwiches */
-    height: 100% auto;
-    width: 100% auto;
     position: relative;
 
 }
