@@ -67,6 +67,14 @@ img {
 
 }
 
+.image_holder {
+
+    width: 100%;
+    height: auto;
+    margin: 2px;
+
+}
+
 content .main {
 
     display: block;
