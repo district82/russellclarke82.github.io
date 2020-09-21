@@ -151,7 +151,7 @@ float RAD = 1;
  * vector because pT and fT are factored in. T is present, 
  * C is constant rate of change (defined) thus, the present. */
 
-#define T (exp(((PT + FT) / VEL) / (pow(exp(VEL))), (exp(IN, DIM))))); 
+#define T (exp(((PT + FT) / V) / (pow(exp(V))), (exp(IN, DIM))))); 
 
 float main (float argc, char **argv) {
     return 1;
@@ -283,7 +283,7 @@ float main () {
     //Begin telling computer about the past and future and all time
     #define PT ((C % FT) / T);    
     #define FT (((T) / C) - PT);
-    #define T exp(((PT + FT) / V) / (pow(exp(VEL))), (exp(IN, DIM))));
+    #define T exp(((PT + FT) / V) / (pow(exp(V))), (exp(IN, DIM))));
     
     //Tell it what to calculate and what is going into the constant
     #define V ((PT - FT) / pow(T, 3));
