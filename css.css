@@ -146,6 +146,9 @@ pre {
     font-family: monospace;
     white-space: pre;
     margin: 1em 0;
+    border: 1px, #000, solid;
+    border-radius: 15px;
+    background-color: #fff;
 
 }
 
