@@ -143,17 +143,9 @@ footer {
 pre {
 
     display: block;
-    background-color: white;
-    border: solid gray 1px;
-    border-radius: 15px;
-    padding: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    overflow: auto;
-    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucidia Console", Terminal, monospace;
-    font-size: 1.0em;
-    width: 100%, auto;
-    height: auto;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
 
 }
 
