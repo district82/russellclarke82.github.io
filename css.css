@@ -149,6 +149,7 @@ pre {
     border: 1px, #000, solid;
     border-radius: 15px;
     background-color: #fff;
+    height: 100%, auto;
 
 }
 
@@ -156,7 +157,7 @@ code {
 
     display: block;
     padding: 5px;
-    overflow: auto;
+    overflow: hidden;
     font-family: Monaco, "Bitstream Vera Sans Mono", "Lucidia Console", Terminal, monospace;
     width: 100%, auto;
     height: auto;
