@@ -144,6 +144,7 @@ pre {
 
     display: block;
     font-family: monospace;
+    font-size: 1.0em;
     white-space: pre;
     margin: 1em 0;
     border: 1px, #000, solid;
@@ -151,6 +152,8 @@ pre {
     background-color: #fff;
     height: auto;
     padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 
 }
 
