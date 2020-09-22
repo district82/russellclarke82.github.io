@@ -280,8 +280,9 @@ float main () {
     #define GRAD_DESCENT pow(((COST) - (COST(EPSILON))), 2);    
         
     //Define constant first
-    #define C exp(pow(A), ((exp(--IN)) / (exp(IN++)))); //predecrement all time as past time divide over increment of all time for continuum.
-    //#define C exp(pow(A), ((exp(++PT)) / (exp(FT++)))); //preincrement the past and divide over the future
+    #define C exp(pow(A), ((exp(IN++)) / (exp(--IN)))); 
+    
+    //#define C exp(pow(A), ((exp(FT++)) / (exp(++PT)))); //preincrement the past and divide over the future
     
     //Begin telling computer about the past and future and all time
     #define PT ((C % FT) / T);    
@@ -289,14 +290,14 @@ float main () {
     #define T exp(((PT + FT) / V) / (pow(exp(V))), (exp(IN, DIM))));
     
     //Tell it what to calculate and what is going into the constant
-    #define V ((PT - FT) / pow(T, 3));
+    #define V (pow(T, 3) / (PT - FT));
     #define VEL [T, V];
     #define IN T;
 
     //Markov Decision Process
-    #define REWARD (Y / (INPUT, N));
-    #define PROBABILITY (N / (INPUT, Y));
-    #define MDP (PROBABILITY / (REWARD + BIAS));
+    #define REWARD ((INPUT, N) / Y);
+    #define PROBABILITY ((INPUT, Y) / N);
+    #define MDP ((REWARD + BIAS) / PROBABILITY);
 
     //Implementation
     #define N INPUT++;
@@ -304,14 +305,15 @@ float main () {
     
     //Calculate the probability
     #define Q pow(pow(MDP, N), 2) + Y;
-    #define R (Q / (REWARD + BIAS));
+    #define R ((REWARD + BIAS) / Q);
 
     //Initialise the input, output and hidden layers of the network 
-    #define INPUT (T, OUT, OUTPUT) * WEIGHT) + BIAS;
+    #define INPUT ((T, OUT, OUTPUT) * WEIGHT) + BIAS;
     #define HIDDEN (((INPUT) * (10 * pow(20, 4))) * WEIGHT);
-    #define OUTPUT ((HIDDEN) / (4 * WEIGHT)) + BIAS;
+    #define OUTPUT ((4 * WEIGHT) / (HIDDEN)) + BIAS;
     
     return 1;
+    
 }
                     </code>
                 </pre>
