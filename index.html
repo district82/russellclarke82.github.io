@@ -70,14 +70,12 @@ float PI;
 float U;
 float RAD = 0.1;
 
-#define A 0.1;
-#define PI 3.1415926535;
-#define U exp(pow(pow((PI * (RAD)), 3), ((exp(++A))/(exp(A--))));
-
 float main(float argc, char **argv){
-    print('%f', U);
+    #define A 0.1;
+    #define PI 3.1415926535;
+    #define U exp(pow(pow((PI * (RAD)), 3), ((exp(A++)) / (exp(--A))));
     //return 0.0; //not sure if this will work might do given the main method is float.
-    return 0;
+    return 1;
 }
                     </code>
                 </pre>
@@ -265,7 +263,7 @@ float main () {
     
     //The basics, learning rate first
     #define EPSILON 5E-5;
-    #define Y (0 ?: 1);
+    #define Y (? 0 : 1);
     #define PI 3.1415926535;
     #define A (pow((PI * RAD), DIM));
     #define SIG ((1) / (-1(C--)));
