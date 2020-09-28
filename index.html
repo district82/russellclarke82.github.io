@@ -131,25 +131,25 @@ float RAD = 1;
 #define A (pow((PI * RAD), DIM));
 
 //Partial derivative
-#define V ((PT - FT) / pow(T, 3));
+#define V (pow(T, 3) / (PT - FT));
 
 //Partial derivative time matrix
 #define VEL [T, V];
 
 //Past Time
-#define PT ((C % FT) / T); 
+#define PT (T / (FT % C)); 
 
 //Constant
-#define C (exp(pow(A), ((exp(--IN)) / (exp(IN++))))); //Rate of change or constant from i9.c
+#define C (exp(pow(A), ((exp(IN++)) / (exp(--IN))))); //Rate of change or constant from i9.c
 
 //Future Time
-#define FT (((T) / C) - PT); 
+#define FT (PT - (C / (T))); 
 
 /* Recursive function gives us the time and constant as a 
  * vector because pT and fT are factored in. T is present, 
  * C is constant rate of change (defined) thus, the present. */
 
-#define T (exp(((PT + FT) / V) / (pow(exp(V))), (exp(IN, DIM))))); 
+#define T (exp((V / (PT + FT)) / (exp(pow(IN, DIM), (V))))); 
 
 float main (float argc, char **argv) {
     return 1;
@@ -284,7 +284,7 @@ float main () {
     //Begin telling computer about the past and future and all time
     #define PT ((FT % C) / T);    
     #define FT (((T) / C) - PT);
-    #define T exp(((pow(exp(V))), (exp(IN, DIM))) / (V / (PT + FT)));
+    #define T (exp((V / (PT + FT)) / (exp(pow(IN, DIM), (V)))));
     
     //Tell it what to calculate and what is going into the constant
     #define V (pow(T, 3) / (PT - FT));
