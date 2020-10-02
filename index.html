@@ -231,6 +231,20 @@ float main() {
                 <h4>Code</h4>
                 <pre class="code_div">                    
                     <code>                    
+/**
+ * Learn from the probability of time and question the probability.
+ * An expansion from merging Thyme project with QBits and Particulates
+ * @Created and finished between 04.09.2020 and 05.09.2020
+ * @Listening Peace Orchestra.
+ * @By Russell A E Clarke Et. al
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <float.h>
+#include <time.h>
+
 float A;
 float T;
 float C;
@@ -239,7 +253,7 @@ float FT;
 float V;
 float PI;
 float DIM;
-float SIG(C);
+float SIG;
 float VEL;
 float IN;
 float RAD = 1;
@@ -247,7 +261,7 @@ float RAD = 1;
 float WEIGHT;
 float weights;
 float EPSILON;
-float SIGMOID(O);
+float SIGMOID;
 float COST;
 float BIAS;
 float REWARD;
@@ -260,7 +274,7 @@ float HIDDEN;
 float OUTPUT;
 
 float main () {
-    
+
     //The basics, learning rate first
     #define EPSILON 5E-5;
     #define Y (? 0 : 1);
@@ -278,8 +292,8 @@ float main () {
     #define GRAD_DESCENT (pow(((COST) - (COST(EPSILON))), 2));    
         
     //Define constant first
-    #define C (exp(pow(A), ((exp(IN++)) / (exp(--IN))))); //predecrement all time as past time divide over increment of all time for continuum. Had to swap them as per order of operation
-    //#define C (exp(pow(A), ((exp(++PT)) / (exp(FT++))))); //preincrement the past and divide over the future
+    #define C SIG(exp(pow(A), ((exp(IN++)) / (exp(--IN))))); //predecrement all time as past time divide over increment of all time for continuum. Had to swap them as per order of operation
+    //#define C SIG(exp(pow(A), ((exp(++PT)) / (exp(FT++))))); //preincrement the past and divide over the future
     
     //Begin telling computer about the past and future and all time
     #define PT ((FT % C) / T);    
@@ -310,7 +324,6 @@ float main () {
     #define OUTPUT ((4 * WEIGHT) / (HIDDEN)) + BIAS;
     
     return 1;
-    
 }
                     </code>
                 </pre>
