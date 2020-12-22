@@ -228,15 +228,18 @@ float main() {
                 <h3>Inputs and Outputs</h3><p>The velocity of some event occurring at some time could be measured over an exponential vector matrix VEL containing time T as a partial differential &#8706;T and velocity as a partial differential &#8706;V. Originally this was included as part of the input into the DNN. However, it was later removed since VEL is a calculation as described in the Thyme project repository images, to get the current velocity relevant to that particular time. Velocity is however included in the T constant input to the DNN.</p>
                 <h5>Output</h5><p>Quantified DNN Output is included in the input to bring the full output of the DNN back into the DNN INPUT to facilitate a full back propagation. Since the hidden layers are divided over the quantity of OUTPUT neurons, the values become less intensive for the DNN to compute,  we don't want to overload the DNN.<br><br>In addition to the overloading, having four output perceptrons, permits a more logical computation for example a nibble, compared to a potential stack overload value. Velocity V is the action in the state space time T and the event of Y occurring in multiple states over T with the reward values and biases being accounted for.</p>
                 <h5>Input</h5><p>Full outputs, the activated output OUT and time are being distributed back through the network for reassessment with back propagation comparable to the initial input. However, that is where things begin to get complicated because INPUT is not simply an input, we have to digress slightly and take another look at hat we are feeding the network.<br><br>Essentially we are feeding everything included in the time T constant including the velocity and the Continuum as the present, The BIAS (OUT) acting on all the weights for all the outputs and the quantified output from the DNN's output layer OUTPUT.</p>
+                <h5>In conclusion</h5><p>It could be possible, the logic of time can be taught to autonomous machines in the hope that one day, they could answer questions and aide our understanding of time itself, and potentially help us to find uses which will benefit humanity particularly where travelling at higher speeds are necessary. To answer my own questions, time might one day be a full tangible thing or object, it is deffinitely a concept and certainly seems to be able to be logically described. The code below is the final revision in spite of my ability to get things wrong.</p>
                 <h4>Code</h4>
                 <pre class="code_div">                    
                     <code>                    
 /**
  * Learn from the probability of time and question the probability.
  * An expansion from merging Thyme project with QBits and Particulates
- * @Created and finished between 04.09.2020 and 05.09.2020
+ * In summary, the code should say this is your frequency (a safe one 5e-5), these are your paramenters, this
+ * is what time is logically, now think about it and question your own logic.
+ * @Created and finished between 04.09.2020 and 05.09.2020 updated 19.12.2020
  * @Listening Peace Orchestra.
- * @By Russell A E Clarke Et. al
+ * @By Russell A E Clarke Et. al notes: https://www.russellclarke.co.uk/
  */
 
 #include <stdio.h>
@@ -252,7 +255,7 @@ float PT;
 float FT;
 float V;
 float PI;
-float DIM; //could be 3rd dimension for example. Set the value here or in the method, Method preferred.
+float DIM = 3; //could be 3rd dimension for example. Set the value here or in the method, Method preferred.
 float SIG;
 float VEL;
 float IN;
@@ -277,53 +280,51 @@ float main () {
 
     //The basics, learning rate first
     #define EPSILON 5E-5;
-    #define Y (? 0 : 1);
+    #define Y (? 0 : 1)
     #define PI 3.1415926535;
-    #define A (pow((PI * RAD), DIM));
-    #define SIG ((1) / (-1(C--)));
-    #define SIGMOID (1.0 / (-1 + (exp(O)--))));
+    #define A (pow((PI * RAD), DIM))
+    #define SIG ((1) / (-1(C--)))
+    #define SIGMOID (1.0 / (-1 + (exp(O)--))))
     
     //Preparing for NN and Biases
-    #define WEIGHT (modf(((randn() % 1.0) + 0.0), float *wdiscard));
-    #define BIAS (modf(((randn() % 1.0) + 0.0), float *bdiscard));
+    #define WEIGHT (modf(((randn() % 1.0) + 0.0), float *wdiscard))
+    #define BIAS (modf(((randn() % 1.0) + 0.0), float *bdiscard))
     
     //Weigh up the costs and gradient of descent
-    #define COST (weights, BIAS);
-    #define GRAD_DESCENT (pow(((COST) - (COST(EPSILON))), 2));    
+    #define COST (weights, BIAS)
+    #define GRAD_DESCENT (pow(((COST) - (COST(EPSILON))), 2))    
         
     //Define constant first
-    #define C SIG(exp(pow(A), ((exp(IN++)) / (exp(--IN))))); //predecrement all time as past time divide over increment of all time for continuum. Had to swap them as per order of operation
-    //#define C SIG(exp(pow(A), ((exp(++PT)) / (exp(FT++))))); //preincrement the past and divide over the future
+    #define C (SIG(exp(pow(A), ((exp(IN++)) / (exp(--IN)))))) //predecrement all time as past time divide over increment of all time for continuum. Had to swap them as per order of operation
+    //#define C (SIG(exp(pow(A), ((exp(++PT)) / (exp(FT++)))))) //preincrement the past and divide over the future
     
     //Begin telling computer about the past and future and all time
-    #define PT ((FT % C) / T);    
-    #define FT (((T) / C) - PT);
-    #define T (exp((V / (PT + FT)) / (exp(pow(IN, DIM), (V)))));
+    #define PT ((FT % C) / T)   
+    #define FT (((T) / C) - PT)
+    #define T (exp((V / (PT + FT)) / (exp(pow(IN, DIM), (V)))))
     
     //Tell it what to calculate and what is going into the constant
-    #define V (pow(T, 3) / (PT - FT));
-    #define VEL [T, V];
+    #define V (pow(T, 3) / (PT - FT))
+    #define VEL [T, V]
     #define IN T;
 
     //Markov Decision Process
-    #define REWARD ((INPUT, N) / Y);
-    #define PROBABILITY ((INPUT, Y) / N);
-    #define MDP ((REWARD + BIAS) / PROBABILITY);
+    #define REWARD ((INPUT, N) / Y)
+    #define PROBABILITY ((INPUT, Y) / N)
+    #define MDP ((REWARD + BIAS) / PROBABILITY)
 
     //Implementation
     #define N INPUT++;
-    #define OUT SIGMOID((weights * N) + BIAS);
+    #define OUT (SIGMOID((weights * N) + BIAS)
     
     //Calculate the probability
-    #define Q pow(pow(MDP, N), 2) + Y;
-    #define R ((REWARD + BIAS) / Q);
+    #define Q (pow(pow(MDP, N), 2) + Y)
+    #define R ((REWARD + BIAS) / Q)
 
     //Initialise the input, output and hidden layers of the network 
-    #define INPUT ((T, OUT, OUTPUT) * WEIGHT) + BIAS;
-    #define HIDDEN (((10 * pow(20, 4)) * WEIGHT * (INPUT));
-    #define OUTPUT ((4 * WEIGHT) / (HIDDEN)) + BIAS;
-    
-    return 1;
+    #define INPUT (((T, OUT, OUTPUT) * WEIGHT) + BIAS)
+    #define HIDDEN (((10 * pow(20, 4)) * WEIGHT * (INPUT))
+    #define OUTPUT (((4 * WEIGHT) / (HIDDEN)) + BIAS)
 }
                     </code>
                 </pre>
